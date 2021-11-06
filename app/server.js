@@ -1,7 +1,17 @@
 const express = require("express");
 const app = express();
 const port = 5000;
+const routes = require("./routes.js")
 
-app.get("/", (req, res) => res.send("<h1>Welcome to React1</h1>") );
+//Routes
+app.use("/", routes)
 
+//Static Filrd Folder
+
+
+//Template engine
+app.set("view engine", "pug");
+
+//Listen on port 5000
 app.listen(port, ()=> console.log (`Example app listening on port ${port}.`))
+
