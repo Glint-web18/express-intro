@@ -7,7 +7,7 @@ const routes = require("./routes.js")
 app.use("/", routes)
 
 //Static Filrd Folder
-
+app.use(express.static('public'))
 
 //Template engine
 app.set("view engine", "pug");
