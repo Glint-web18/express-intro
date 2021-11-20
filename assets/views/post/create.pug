@@ -7,12 +7,15 @@ block content
     // Banner
     section#banner
         .content
-            form
+            form(action="/post/create" method="POST")
                 label Title
-                input(type= "text" name= "demo-name"
-                id="demo-name" value="" placeholder="Name")
+                input(type= "text" name= "title"
+                id="demo-name" value="" placeholder="Enter post title")
+                label Image URL
+                input(type= "text" name= "image_url"
+                id="demo-name" value="" placeholder="Enter featured Image")
                 label Description
-                textarea(name="demo-message" 
+                textarea(name="description" 
                 id="demo-message" placeholder="Enter your message" rows="6") 
                 input(type="submit" value="Send Message"
                 class="primary")

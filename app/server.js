@@ -1,8 +1,12 @@
 const express = require("express");
 const app = express();
 const DB = require("../database/connection.js")
+const bodyParser = require("body-parser")
 const port = 5000;
 const routes = require("./routes.js")
+
+//Using body parser for post request data
+app.use(bodyParser.urlencoded({extended:true}));
 
 //Routes
 app.use("/", routes)
