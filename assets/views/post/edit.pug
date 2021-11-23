@@ -7,7 +7,7 @@ block content
     // Banner
     section#banner
         .content
-            form(action="/post/create" method="POST")
+            form(action=`/post/${id}/edit` method="POST")
                 label Title
                 input(type= "text" name= "title"
                 id="demo-name" value=`${title}` placeholder="Enter post title")
@@ -19,4 +19,5 @@ block content
                 id="demo-message" placeholder="Enter your message" rows="6")= description  
                 input(type="submit" value="Send Message"
                 class="primary")
+                a(href=`/post/${id}/delete` class="primary")   Delete  Post 
 
