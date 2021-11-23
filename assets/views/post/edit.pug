@@ -10,13 +10,13 @@ block content
             form(action="/post/create" method="POST")
                 label Title
                 input(type= "text" name= "title"
-                id="demo-name" value="" placeholder="Enter post title")
+                id="demo-name" value=`${title}` placeholder="Enter post title")
                 label Image URL
                 input(type= "text" name= "image_url"
-                id="demo-name" value="" placeholder="Enter featured Image")
+                id="demo-name" value=`${image_url}` placeholder="Enter featured Image")
                 label Description
                 textarea(name="description" 
-                id="demo-message" placeholder="Enter your message" rows="6") 
+                id="demo-message" placeholder="Enter your message" rows="6")= description  
                 input(type="submit" value="Send Message"
                 class="primary")
 
